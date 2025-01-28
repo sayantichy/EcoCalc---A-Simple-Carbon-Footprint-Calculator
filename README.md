@@ -106,7 +106,7 @@ We plan to expand EcoCalc with additional features, including:
 ## 📄 License
 This project is licensed under the MIT License. See the LICENSE file for details.
 ## 🌍 Live Demo
-Try EcoCalc live at: https://ecocalc.example.com
+Try EcoCalc live at: [https://ecocalc.example.com](https://sayantichy.github.io/EcoCalc---A-Simple-Carbon-Footprint-Calculator/)
 ## 📞 Contact
 For questions or suggestions, feel free to reach out:
 
