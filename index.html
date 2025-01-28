@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoCalc - Carbon Footprint Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <header>
+    <h1>EcoCalc</h1>
+    <p>Your Personal Carbon Footprint Calculator</p>
+    <button id="dark-mode-toggle">🌙 Dark Mode</button>
+  </header>
+
+  <section id="hero">
+    <img src="assets/eco-bg.jpg" alt="Eco-friendly world">
+    <h2>Track & Reduce Your Carbon Footprint 🌍</h2>
+    <p>Small actions can make a **big impact**. Start now!</p>
+  </section>
+
+  <main>
+    <section id="calculator">
+      <h2>Calculate Your Carbon Footprint</h2>
+      <form id="eco-form">
+        <fieldset>
+          <legend><img src="assets/car.png" alt="Car"> Transportation</legend>
+          <label>🚗 Daily Car Travel (km): <input type="number" id="car-km"></label>
+          <label>🚌 Public Transport (km): <input type="number" id="bus-km"></label>
+        </fieldset>
+        
+        <fieldset>
+          <legend><img src="assets/electricity.png" alt="Electricity"> Electricity Usage</legend>
+          <label>⚡ Electricity Usage (kWh): <input type="number" id="electricity-kwh"></label>
+          <label>☀️ Renewable Energy %: <input type="number" id="renewable-energy" max="100"></label>
+        </fieldset>
+
+        <fieldset>
+          <legend><img src="assets/food.png" alt="Diet"> Diet & Lifestyle</legend>
+          <label>🥗 Diet Type:
+            <select id="diet">
+              <option value="vegan">Vegan</option>
+              <option value="vegetarian">Vegetarian</option>
+              <option value="omnivore">Omnivore</option>
+            </select>
+          </label>
+          <label>🗑️ Waste Generated (kg/day): <input type="number" id="waste"></label>
+        </fieldset>
+
+        <div class="actions">
+          <button type="button" id="calculate-btn">🌱 Calculate</button>
+          <button type="button" id="reset-btn">🔄 Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="results">
+      <h2>📌Results</h2>
+      <img src="assets/result-bg.jpg" alt="Result Image">
+      <p>Total Carbon Footprint: <span id="total-emission">0</span> kg CO₂/day</p>
+      <canvas id="chart"></canvas>
+      <ul id="breakdown"></ul>
+
+      <h3>💰 Cost Savings Estimate</h3>
+      <p id="cost-savings"></p>
+
+      
+      <ul id="suggestions"></ul>
+      <button id="share-btn">📢 Share Your Results</button>
+    </section>
+    <section id="ai-section">
+        <h3>🧠 AI-Powered Suggestions</h3>
+        <p>Personalized recommendations based on your carbon footprint:</p>
+        <ul id="ai-suggestions"></ul>
+      </section>
+  </main>
+
+  <footer>
+    <p>Made with ❤️ for a greener planet</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
 
